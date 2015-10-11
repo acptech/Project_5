@@ -1,0 +1,349 @@
+/*Map styles*/
+html,
+body,
+.map-canvas {
+	height: 98%;
+	margin: 0;
+	padding: 0;
+}
+
+.controls {
+	margin-top: 16px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 25%;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pac-input {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin-left: 12px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 23.9%;
+}
+
+.pac-input:focus {
+	border-color: #4d90fe;
+}
+
+.pac-container {
+	font-family: Roboto;
+}
+/*End Map styles*/
+
+.title {
+	text-align: center;
+	background-color: #0000FF;
+	color: #ffffff;
+	padding: 10px;
+	margin: 0;
+}
+/*Results box under search bar*/
+.info-container {
+	width: 25%;
+	height: 635px;
+	z-index: 10;
+	position: absolute;
+	top: 110px;
+	-webkit-transition: transform 3s; /* For Safari 3.1 to 6.0 */
+	transition: transform 2s;
+}
+
+.results-hide {
+	transform: translateX(-98%);
+}
+
+.hide-show-btn {
+	position: absolute;
+	top: 100px;
+	left: 97.5%;
+	width: 13px;
+	border: 2px solid #3d831e;
+	background-color: #36FFAA;
+	text-align: center;
+	border-radius: 5px;
+	padding: 2px 4px 2px 6px;
+	z-index: -1;
+	cursor: pointer;
+}
+
+.results {
+	width: 95.5%;
+	height: 300px;
+	z-index: 10;
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin-left: 12px;
+	margin-bottom: 5px;
+	padding: 0 11px 0 13px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	overflow: auto;
+}
+/*Results formatting*/
+.hr-clear {
+	clear: left;
+	width: 100%;
+	margin-bottom: -10px;
+}
+
+.results-ul {
+	padding-left: 5px;
+	clear: left;
+}
+
+.results-li {
+	list-style-type: none;
+}
+
+.results-li p {
+	margin: 5px 0;
+}
+
+.results-clear {
+	color: #0000EE;
+	cursor: pointer;
+	float:right;
+	margin: 5px 0;
+}
+
+.results-title {
+	margin: 5px 0;
+	float: left;
+	margin: 5px 0;
+}
+
+.cbratings {
+	float: left;
+	margin: 5px 0;
+}
+
+li.results-li:hover {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 0 5px;
+	background-color: #ccc;
+}
+
+.breath-mtr-container {
+	margin-left: 12px;
+	margin-bottom: 5px;
+	width: 95.5%;
+	height: 70px;
+	z-index: 10;
+	background-color: #fff;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	background-image: url(../images/breezometer_logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.breath-img {
+	float: left;
+}
+
+.breath-results {
+	font-family: Roboto;
+	margin-left: 30%;
+}
+
+p.airdata {
+	margin: 0;
+	padding: 1% 0 0 0;
+	text-align: center;
+}
+
+.street-view {
+	margin-left: 12px;
+	width: 95.5%;
+	height: 250px;
+	z-index: 10;
+}
+
+.infobox-outer {
+	background-image: url(../images/tipbox.gif);
+	display: inline-block;
+	width: 275px;
+	position: absolute;
+}
+
+.infobox-inner {
+	font-size:15px;
+	border: 3px solid #3d831e;
+	border-radius: 5px;
+	margin-top: 8px;
+	background: #36FFAA;
+	padding: 5px;
+}
+
+@media screen and (max-width : 770px) {
+	.info-container,
+	.controls {
+		width: 35%;
+	}
+	.pac-input {
+		width: 33.5%;
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.pac-input {
+		width: 50%;
+	}
+	.info-container {
+		top: 110px;
+		width: 52.4%;
+	}
+	.hide-show-btn {
+		left: 98.5%;
+		top: 80px;
+	}
+	.results {
+		height: 220px;
+	}
+	.breath-mtr-container {
+		height: 56px;
+	}
+	p.airdata.airdata-1 {
+		font-size: 14px;
+		padding: 3% 0 0 0;
+	}
+	p.airdata.airdata-2 {
+		display: none;
+	}
+}
+/*Ipad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.info-container,
+	.controls {
+		width: 49%;
+	}
+	.pac-input {
+		width: 46.8%;
+	}
+}
+
+/*Ipad landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	.info-container,
+	.controls {
+		width: 37%;
+	}
+	.pac-input {
+		width: 35.41%;
+	}
+}
+
+/*Iphone6 portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+	.pac-input {
+		width: 60%;
+	}
+	.info-container {
+		width: 62.6%;
+	}
+	p.airdata.airdata-1 {
+		font-size: 14px;
+		padding: 7% 0 0 0;
+	}
+	.results-clear {
+		  position: relative;
+		  top: -60px;
+		  left: -5px;
+	}
+}
+/*Iphone6 landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+	.pac-input {
+		width: 80%;
+	}
+	.info-container {
+		width: 80%;
+	}
+	.hide-show-btn {
+		left: 97%;
+		top: 10px;
+	}
+	.results {
+		height: 17%;
+	}
+	.breath-mtr-container {
+		height: 56px;
+	}
+	p.airdata {
+		margin: 0;
+		padding: 3% 0 0 2%;
+		text-align: center;
+		float: left;
+		font-size: 14px;
+  	}
+}
+
+@media screen and (max-width : 320px) {
+	.title {
+		font-size:25px;
+	}
+	.pac-input {
+		width: 70%;
+	}
+	.info-container {
+		top: 100px;
+		width: 72.9%;
+	}
+	.hide-show-btn {
+		left: 98.5%;
+		top: 35px;
+	}
+	.results {
+		font-size: 12px;
+		height: 151px;
+	}
+	.infobox-inner {
+		font-size: 13px;
+	}
+	p.airdata.airdata-1 {
+		font-size: 13px;
+	}
+	.results-clear {
+		position: relative;
+		top: -55px;
+		left: -5px;
+	}
+}
+
+@media screen and (max-width : 240px) {
+	.title {
+		font-size:20px;
+	}
+	.breath-mtr-container {
+		height: 48px;
+	}
+	.results-clear {
+		position: relative;
+		top: -56px;
+		left: -2px;
+	}
+	.cbratings {
+		width: 113%;
+		position: relative;
+		left: -12px;
+	}
+}
